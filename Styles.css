@@ -6,6 +6,76 @@
     margin:0;
     padding: 0;
     font-family: "Poppins", sans-serif;
+    overflow: hidden;
+}
+header {
+    position: absolute;
+    padding: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: white;
+}
+.button {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+}
+.button-close{
+    font-size: 2.5em;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}
+.menu ul {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    list-style: none;
+}
+.menu ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.6em;
+    font-weight: 400;
+    line-height: 3em;
+    display: inline-block;
+    padding: 0 20px;
+    transition: 0.2s;
+}
+.menu ul li a:hover{
+    transform: translateX(-10px);
+}
+
+
+.menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    z-index: 105;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(320px);
+    transition: 0.4s;
+}
+.menu.active {
+    transform: translateX(0px);
+    width: 300px;
 }
 
 .showcase {
@@ -24,9 +94,10 @@
     top:0;
     left: 0;
     width: 100%;
-    max-height: 100vh;
+   height: 100vh;
     object-fit: cover;
     z-index: 1;
+
 
 
 }
@@ -75,7 +146,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(70, 40, 6);
+    background-color: rgb(109, 63, 11);
     mix-blend-mode: overlay;
     z-index: 30;
 }
