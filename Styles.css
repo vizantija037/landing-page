@@ -27,6 +27,8 @@ header {
     font-weight: 700;
     color: white;
     cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 .button-close{
     font-size: 2.5em;
@@ -51,8 +53,8 @@ header {
     font-weight: 400;
     line-height: 3em;
     display: inline-block;
-    padding: 0 20px;
     transition: 0.2s;
+    padding: 20px;
 }
 .menu ul li a:hover{
     transform: translateX(-10px);
@@ -60,22 +62,23 @@ header {
 
 
 .menu {
-    position: absolute;
+    position: fixed;
     top: 0;
-    right: 0;
+    right: -300px;
     width: 300px;
     height: 100vh;
     background-color: rgb(0, 0, 0);
     z-index: 105;
-    display: flex;
+    display:flex;
     justify-content: center;
     align-items: center;
-    transform: translateX(320px);
     transition: 0.4s;
+    overflow: hidden;
 }
 .menu.active {
-    transform: translateX(0px);
+    right: 0px;
     width: 300px;
+
 }
 
 .showcase {
@@ -88,6 +91,7 @@ header {
     align-items: center;
 
 }
+
 
 .showcase video {
     position: absolute;
@@ -104,7 +108,7 @@ header {
 .text {
     position:relative;
     z-index: 50;
-    padding: 40px;
+
 }
 .text h2 {
     font-size: 6em;
@@ -165,9 +169,7 @@ header {
     .text h3 {
         font-size: 1.5em;
     }
-    .text {
-        padding: 10px;
-    }
+
     .text a {
         font-size: 1.5em;
         padding: 5px 20px;
